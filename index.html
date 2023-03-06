@@ -1,95 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="screen">
-      <div id="game">
-        <div id="game_background"></div>
-        <div id="game_elemnts">
-          <div id="mushroom1_container">
-            <img id="mushrooms1_sprite" src="" alt="" />
-          </div>
-          <div id="mushroom2_container">
-            <img id="mushrooms2_sprite" src="" alt="" />
-          </div>
-          <div id="mushroom3_container">
-            <img id="mushroom3_sprite" src="" alt="" />
-          </div>
-        </div>
-        <div id="game_foreground"></div>
-
-        <div id="game_ui">
-          <img id="time_board" src="" />
-          <img id="score_board" src="" />
-          <img id="life_board" src="" />
-        </div>
-      </div>
-
-      <div id="start"></div>
-      <div id="game_over"></div>
-      <div id="victory"></div>
-    </div>
-  </body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style1.css">
-   <link rel="stylesheet" href="animation.css">
-   <title>clicker spil</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Good vs bad monsters</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
-   <div id="screen">
-       <div id="game">
-           <div id="background"></div>
-           <div id="gamel_elements">
-               <div id="mushroom1_container">
-                <img id="mushroom1" src="../images/mushroom1.png" alt="mushroom1">
-               </div>
-               <div id="mushroom2_container">
-                <img id="mushroom2" src="../images/mushroom2.png" alt="mushroom2"> 
-               </div>
-               <div id="mushroom3_container">
-                <img id="mushroom3" src="../images/mushroom3.png" alt="mushroom3"> 
-               </div>
-               <div id="mushroom4_container">
-                <img id="mushroom4" src="../images/mushroom4.png" alt="mushroom4"> 
-               </div>
-               <div id="book2_container">
-                   <img id="book2" src="../images/book2.png" alt="book2">
-               </div>
-               <div id="book3_container">
-                   <img id="book3" src="../images/book3.png" alt="book3">
-               </div>
-               <div id="book4_container">
-                   <img id="book4" src="../images/book4.png" alt="book4">
-               </div>
-               <div id="book5_container">
-                   <img id="book5" src="../images/book5.png" alt="book5">
-               </div>
-           </div>
+    <div id="screen">
+        <div id="game">
+            <div id="background"></div>
+            <div id="game_elements">
+                <div id="good1_container">
+                 <img id="good1" src="../images/good1.png"> 
+                </div>
+                <div id="good2_container">
+                 <img id="good2" src="../images/good2.png">  
+                </div>
+                <div id="good3_container">
+                 <img id="good3" src="../images/good3.png">  
+                </div>
+                <div id="good4_container">
+                 <img id="good4" src="../images/good4.png">  
+                </div>
+                <div id="bad1_container">
+                 <img id="bad1" src="../images/bad1.png">  
+                </div>
+                <div id="bad2_container">
+                    <img id="bad2" src="../images/bad2.png"> 
+                </div>
+                <div id="bad3_container">
+                    <img id="bad3" src="../images/bad3.png"> 
+                </div>
+                <div id="bad4_container">
+                    <img id="bad4" src="../images/bad4.png"> 
+                </div>
+
+            </div>
+
+    <div id="game_ui">
+        <div id="score_board"> 
+            <span id="point_count">0</span>
+            <img  id="point_image" src="images/point.png">
+        </div>
+          <div id="life_board">
+            <img id="heart1" src="images/heart.png" class="active_heart">
+            <img id="heart2" src="images/heart.png" class="active_heart">
+            <img id="heart3" src="images/heart.png" class="active_heart">
+        </div>
+            <div id="time_board">
+                <div id="time_container">
+                <div id="time" class=""></div>
+                </div>
+            </div>
+    </div>
+    </div> 
+ <div id="start">
+        <h2>Good vs Bad monsters</h2>
+        <p> Collect 10 good monsters before the time runs out</p>
+        <p> You lose one life and one point everytime you click on a bad monster </p>
+        <p> Good luck figuring out which one is good and which one is bad! </p>
+        <button id="btn_start" class="pulse">Start</button>
+     </div>
+
+<div id="start" class="hidden"></div>
+
+        <div id="game_over" class="hidden">
+            <h2>Game Over</h2>
+            <button id="try_again" class="pulse">Wanna try again?</button>
+        </div>
+        <div id="level_complete" class="hidden">
+              <h2>Level Complete</h2>
+    <p>Congratulations! You have successfully collected all the good monsters.</p>
+            <button id="try_again1" class="pulse">Wanna try again?</button>
+        </div>
+    </div> 
+
+<audio id="background_sound" src="sounds/background_sound.mp3"></audio>
+<audio id="good_sound" src="sounds/good_sound.mp3"></audio>
+<audio id="bad_sound" src="sounds/bad_sound.mp3"></audio>
 
 
-       <div id="game_ui">
- <img id="timeboard" src="../images/timeboard.png">         
-       </div>
-       </div>
-<div id="start"></div>
-<div id="game_over"></div>
-<div id="game_complete"></div>
-   </div>
+    <script src="script.js"></script>
 </body>
 </html>
-
